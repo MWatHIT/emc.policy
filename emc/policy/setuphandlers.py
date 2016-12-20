@@ -34,91 +34,91 @@ STRUCTURE = [
                           'title': u'主板',
                           'id': 'motherboard',
                           'description': u'主板组',
-                          
-                          
-                          'layout': 'ajax_listings',                          
-                                             } ,  
+
+
+                          'layout': 'ajax_listings',
+                                             } ,
                          {'type': 'emc.project.team',
                           'title': u'显卡',
                           'id': 'displaycard',
                           'description': u'显卡',
-                          
-                          
+
+
                           'layout': 'ajax_listings',
                            'children': [
                                         {'type': 'emc.project.doc',
                                          'title': u'显卡分析',
                                          'id': 'analysis',
                                          'description': u'显卡分析文档',
-                                         
-                                                                   
-                                                                             } ,  
+
+
+                                                                             } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'显卡设计',
                                          'id': 'design',
                                          'description': u'显卡设计文档',
-                                         
-                                         
-                                                                         } ,    
+
+
+                                                                         } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'显卡审核',
                                          'id': 'audit',
                                          'description': u'显卡审核文档',
-                                         
-                                         
-                                                                         } ,  
+
+
+                                                                         } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'故障诊断',
                                          'id': 'diagnose',
                                          'description': u'故障诊断文档',
-                                         
-                                         
-                                                                         } ,                                                                                       
-                         
+
+
+                                                                         } ,
+
                                                                         ]
-                                             } ,                                                
+                                             } ,
                          {'type': 'emc.project.team',
                           'title': u'网卡',
                           'id': 'network',
                           'description': u'网卡',
-                          
-                          
+
+
                           'layout': 'ajax_listings',
                            'children': [
                                         {'type': 'emc.project.doc',
                                          'title': u'网卡分析',
                                          'id': 'analysis',
                                          'description': u'网卡分析文档',
-                                         
-                                                                   
-                                                                             } ,  
+
+
+                                                                             } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'网卡设计',
                                          'id': 'design',
                                          'description': u'网卡设计文档',
-                                         
-                                         
-                                                                         } ,    
+
+
+                                                                         } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'网卡审核',
                                          'id': 'audit',
                                          'description': u'网卡审核文档',
-                                         
-                                         
-                                                                         } ,  
+
+
+                                                                         } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'故障诊断',
                                          'id': 'diagnose',
                                          'description': u'故障诊断文档',
-                                         
-                                         
-                                                                         } ,                                                                                       
-                         
+
+
+                                                                         } ,
+
                                                                         ]
-                                             } ,                            
+                                             } ,
                                             ]
                       },
-           
+
                 ]
     },
 {
@@ -140,9 +140,9 @@ STRUCTURE = [
                       'id': 'resources_folder',
                       'description': u'存放各种类型文件的容器',
                       'layout': 'folder_contents',
-                                           
+
                       }]
-        }               
+        }
 ]
 
 
@@ -156,7 +156,7 @@ def post_install(context):
     if isNotCurrentProfile(context):
         return
     # Do something during the installation of this package
-    # return
+    return
     portal = api.portal.get()
     members = portal.get('events', None)
     if members is not None:
@@ -173,26 +173,26 @@ def post_install(context):
     current = api.user.get_current()
     try:
         pm.memberareaCreationFlag = True
-        pm.createMemberarea(member_id= current.id)      
+        pm.createMemberarea(member_id= current.id)
         event.notify(MemberAreaCreatedEvent(current))
     except:
         return
-    
+
 
     for item in STRUCTURE:
         _create_content(item, portal)
 #     set relation
 
- 
-    for i in range(1,20): 
+
+    for i in range(1,20):
         user = api.user.create(
                                username='test%s' % i,
 #                                fullname=u'张测%s',
                                email='test%s@plone.org' % i,
                                password='secret',
-                               )    
-               
-                
+                               )
+
+
 
 
 def content(context):
@@ -211,7 +211,7 @@ def _create_content(item, container):
             type=item['type'],
             container=container,
             title=item['title'],
-            description=item['description'],            
+            description=item['description'],
             id=item['id'],
             safe_id=False)
         logger.info('Created item {}'.format(new.absolute_url()))

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="here/main_template/macros/master"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="emc.policy">
+<head>
+  <metal:block fill-slot="top_slot">
+    <tal:insert tal:replace="nothing"
+      tal:define="disable_column_two python:request.set('disable_plone.rightcolumn', 1)" />
+    </metal:block>
+</head>
+
+<body>
+
+  <div metal:fill-slot="main">
+    <div class="container-fluid">
+      <div class="row clearfix">
+        <div class="col-md-12 column">
+          <div class="jumbotron">
+            <h1>
+              EMC!
+            </h1>
+            <p>
+              This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+            </p>
+            <p>
+               <a class="btn btn-primary btn-large" href="#">Learn more</a>
+            </p>
+          </div>
+          <div class="tabbable" id="tabs-1">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                 <a href="#panel-1" data-toggle="tab">Section 1</a>
+              </li>
+              <li>
+                 <a href="#panel-2" data-toggle="tab">Section 2</a>
+              </li>
+              <li>
+                 <a href="#panel-3" data-toggle="tab">Section 3</a>
+              </li>
+              <li>
+                 <a href="#panel-4" data-toggle="tab">Section 4</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="panel-1">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/001.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/002.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/003.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/004.png"></img>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="panel-2">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/005.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/006.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/007.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/008.png"></img>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="panel-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/009.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/010.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/011.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/012.png"></img>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="panel-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/013.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/014.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/015.png"></img>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <img src="PNG/128/016.png"></img>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>
