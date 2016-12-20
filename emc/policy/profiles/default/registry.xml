@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
 <registry>
   <!--resource -->
-  
+  <records prefix="plone.resources/bootstrap-tabs"
+    interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++plone++static/components/bootstrap/js/tab.js</value>
+    <value key="deps">jquery</value>
+  </records>
   <!-- Bundles -->
   <records prefix="plone.bundles/emc-legacy"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-    
+
     <value key="depends">plone</value>
     <value key="jscompilation">++resource++emc.policy/emc-legacy-custom.js</value>
     <value key="last_compilation">2015-08-14 00:00:00</value>
@@ -51,11 +55,11 @@
       <element>Event</element>
       <element>emc.kb.folder</element>
       <element>emc.kb.kbfolder</element>
-      <element>emc.kb.ormfolder</element>       
+      <element>emc.kb.ormfolder</element>
       <element>emc.project.projectFolder</element>
       <element>emc.project.project</element>
       <element>emc.project.team</element>
-      <element>emc.memberArea.workspace</element>      
+      <element>emc.memberArea.workspace</element>
       <element>emc.memberArea.inputbox</element>
       <element>emc.memberArea.outputbox</element>
       <element>emc.memberArea.message</element>
@@ -63,16 +67,16 @@
       <element>emc.memberArea.inputbox</element>
       <element>emc.memberArea.todo</element>
       <element>emc.memberArea.favorite</element>
-      <element>emc.bokeh.fearture</element>                                           
+      <element>emc.bokeh.fearture</element>
     </value>
   </record>
 
 <records interface="Products.CMFPlone.interfaces.ISecuritySchema" prefix="plone">
     <value key="enable_self_reg">True</value>
     <value key="enable_user_pwd_choice">True</value>
-    <value key="enable_user_folders">True</value>    
+    <value key="enable_user_folders">True</value>
 </records>
-<!-- custom TinyMCE templates -->	
+<!-- custom TinyMCE templates -->
 <!-- activate the plugin -->
 <record name="plone.custom_plugins" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="custom_plugins">
     <field type="plone.registry.field.List">
