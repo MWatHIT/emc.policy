@@ -26,7 +26,7 @@
               This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
             </p>
             <p>
-               <a class="btn btn-primary btn-large" href="#">Learn more</a>
+               <a class="btn btn-primary btn-large" href="/kb_folder">Learn more</a>
             </p>
           </div>
           <div class="tabbable" id="tabs-1">
@@ -48,6 +48,12 @@
               <div class="tab-pane fade in active" id="panel-1">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <img src="http://kwsensen1.f3322.net:8080/emcstatic/ico/xinghaogongcheng.png"></img>
+                  <button type="button" class="btn btn-default" title="功能说明"
+                    data-container="body" data-toggle="popover" data-placement="top"
+                    data-content="功能1的说明">
+                    功能1
+                  </button>
+
                 </div>
               </div>
               <div class="tab-pane fade" id="panel-2">
