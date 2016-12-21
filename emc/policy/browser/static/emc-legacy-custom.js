@@ -22,7 +22,11 @@ $(".nav-tabs").on("click","a",function (e) {
     return false;
   });
 // popover
-%("[data-toggle='popover']").popover();
+$("[data-toggle='popover']").popover({
+  trigger:"hover",
+  placement:"right"
+  html="true"
+});
 
 });
 });
