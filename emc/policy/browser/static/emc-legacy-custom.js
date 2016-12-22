@@ -22,11 +22,11 @@ $(".nav-tabs").on("click","a",function (e) {
     return false;
   });
 // popover
-$(".func_pop").popover({
-  trigger:"hover",
-  placement:"right"
-  html="true"
-});
+// $(".func_pop").popover({
+//   trigger:"hover",
+//   placement:"right"
+//   html="true"
+// });
 
 });
 });
