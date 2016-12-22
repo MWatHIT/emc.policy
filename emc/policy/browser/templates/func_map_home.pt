@@ -48,7 +48,7 @@
               <div class="tab-pane fade in active" id="panel-1">
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                   <img src="http://kwsensen1.f3322.net:8080/emcstatic/ico/xinghaogongcheng.png"></img>
-                  <button id="func_1" type="button" class="btn btn-default" title="功能说明"
+                  <button id="func_pop" type="button" class="btn btn-default" title="功能说明"
                     data-container="body" data-toggle="popover" data-placement="top"
                     data-content="<div><h3>型号工程</h></div><div>该部分由产品树、设计师团队以及相关的电磁兼容任务等要素组成，相互分工与配合以完成各级型号产品的电磁兼容性工作。</div>">
                     功能1

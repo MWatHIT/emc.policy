@@ -22,7 +22,7 @@ $(".nav-tabs").on("click","a",function (e) {
     return false;
   });
 // popover
-$("[data-toggle='popover']").popover({
+$(".func_pop").popover({
   trigger:"hover",
   placement:"right"
   html="true"
