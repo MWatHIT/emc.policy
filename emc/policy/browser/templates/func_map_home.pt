@@ -46,10 +46,10 @@
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade in active" id="panel-1" style="margin-top:40px">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="由产品树、设计师团队以及相关的电磁兼容任务等要素组成，相互分工与配合以完成各级型号产品的电磁兼容性工作。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/xinghaogongcheng.png"></img>
 
-                  <button id="func_pop" class="btn btn-default btn-block" title="由产品树、设计师团队以及相关的电磁兼容任务等要素组成，相互分工与配合以完成各级型号产品的电磁兼容性工作。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     型号工程
                   </button>
@@ -57,37 +57,37 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="panel-2" style="margin-top:40px">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供电磁环境预测、频率分析、屏蔽效能计算、线缆辐射及耦合分析、天线辐射场计算与天线隔离度分析等分析方法，并给出可以采用的软件工具及相关链接。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_fenxi.png"></img>
-                  <button id="func_pop" class="btn btn-default btn-block" title="提供电磁环境预测、频率分析、屏蔽效能计算、线缆辐射及耦合分析、天线辐射场计算与天线隔离度分析等分析方法，并给出可以采用的软件工具及相关链接。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     电磁兼容性分析模块
                   </button>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供电磁兼容性中常用设计方法及相关标准，提供可以采用的计算程序或商用软件介绍及举例。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_sheji.png"></img>
-                  <button id="func_pop" class="btn btn-default btn-block" title="提供电磁兼容性中常用设计方法及相关标准，提供可以采用的计算程序或商用软件介绍及举例。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     电磁兼容性设计模块
                   </button>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="包含系统、分系统与设备的试验方法，以及相关标准规范等。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_shiyan.png"></img>
-                  <button id="func_pop" class="btn btn-default btn-block" title="包含系统、分系统与设备的试验方法，以及相关标准规范等。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     电磁兼容性实验模块
                   </button>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供常用软件介绍、使用指南与仿真案例等。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_ruanjian.png"></img>
-                  <button id="func_pop" class="btn btn-default btn-block" title="提供常用软件介绍、使用指南与仿真案例等。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性仿真软件应用模块
+                    电磁兼容性仿真模块
                   </button>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供各类数据、标准、期刊和会议论文、培训教材等，并对其进行归纳分类。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_peixun.png"></img>
-                  <button id="func_pop" class="btn btn-default btn-block" title="提供各类数据、标准、期刊和会议论文、培训教材等，并对其进行归纳分类。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     电磁兼容性培训模块
                   </button>
@@ -97,13 +97,35 @@
                 <h2>科学计算目录</h2>
               </div>
               <div class="tab-pane fade" id="panel-4" style="margin-top:40px">
-                <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁兼容性设计中制定的设计参数与电磁兼容技术有关的国标、国军标、部标、院标、型号标准规范、美军标及欧洲标准，将其整理归类，用来查询及调用。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_shujuku.png"></img>
-                  <button id="func_pop" class="btn btn-default btn-block" title="记录电磁兼容性设计中制定的设计参数与电磁兼容技术有关的国标、国军标、部标、院标、型号标准规范、美军标及欧洲标准，将其整理归类，用来查询及调用。"
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     电磁兼容性参数数据库
                   </button>
                 </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁环境的电磁数据及几何特性数据。">
+                  <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_huaijingku.png"></img>
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
+                    data-container="body" data-toggle="popover" data-placement="top">
+                    电磁兼容性环境数据库
+                  </button>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" title="包含测试目的、测试属性（型号，批次，外场，实验室等情况）、测试人员及时间和地点、测试仪器、测试类型及结果、测试方法">
+                  <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_ceshiku.png"></img>
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
+                    data-container="body" data-toggle="popover" data-placement="top">
+                    电磁兼容性测试数据库
+                  </button>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁兼容设计中的通用数据。">
+                  <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_gongyongku.png"></img>
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
+                    data-container="body" data-toggle="popover" data-placement="top">
+                    电磁兼容性公用数据库
+                  </button>
+                </div>
+
               </div>
             </div>
             </div>
