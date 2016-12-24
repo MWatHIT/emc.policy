@@ -105,7 +105,7 @@
                   </button>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁环境的电磁数据及几何特性数据。">
-                  <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_huaijingku.png"></img>
+                  <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_huanjingku.png"></img>
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     电磁兼容性环境数据库
