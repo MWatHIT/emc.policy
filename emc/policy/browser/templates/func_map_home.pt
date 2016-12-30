@@ -23,7 +23,7 @@
               EMC!
             </h1>
             <p>
-              This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+              系统电磁兼容技术支持平台主要是为信息化实施型号电磁兼容项目而设计和开发的，针对单位开展装备全寿命期的电磁兼容工作进行整体管理和辅助设计支持。另外平台也为单位的电磁兼容爱好者和相关人员提供了学习和参与的平台。
             </p>
             <p>
                <a class="btn btn-primary btn-large" href="/kb_folder">Learn more</a>
@@ -51,7 +51,9 @@
 
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    型号工程
+                    <a data-target="#xinghaogongcheng" href="#xinghaogongcheng"
+          						tal:attributes="data-js-target python:context.absolute_url() + '/project_folder'">
+                    型号工程</a>
                   </button>
 
                 </div>
