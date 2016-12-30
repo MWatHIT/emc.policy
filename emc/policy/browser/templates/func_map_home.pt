@@ -52,7 +52,7 @@
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
                     <a data-target="#xinghaogongcheng" href="#xinghaogongcheng"
-          						tal:attributes="data-js-target python:context.absolute_url() + '/project_folder'">
+          						tal:attributes="herf python:context.absolute_url() + '/project_folder'">
                     型号工程</a>
                   </button>
 
