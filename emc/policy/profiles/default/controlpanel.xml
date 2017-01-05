@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="emc.project"
+    purge="False">
+    <!--
+    <configlet
+        title="Document Types"
+        action_id="documenttypes"
+        appId="documenttypes"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@type-settings"
+        visible="True"
+        i18n:attributes="title">
+            <permission>Manage portal</permission>
+    </configlet>
+  -->
+
+  <configlet title="Add-ons" action_id="QuickInstaller" appId="QuickInstaller"
+     category="plone-general" condition_expr=""
+     icon_expr="string:$portal_url/product_icon.png"
+     url_expr="string:${portal_url}/prefs_install_products_form"
+     visible="False" i18n:attributes="title">
+   <permission>Manage portal</permission>
+  </configlet>
+  <configlet title="Site" action_id="PloneReconfig" appId="Plone"
+     category="plone-general" condition_expr=""
+     icon_expr="string:$portal_url/logoIcon.png"
+     url_expr="string:${portal_url}/@@site-controlpanel" visible="False"
+     i18n:attributes="title">
+   <permission>Plone Site Setup: Site</permission>
+  </configlet>
+  <configlet title="Date and Time" action_id="DateAndTime" appId="DateAndTime"
+     category="plone-general" condition_expr=""
+     icon_expr="string:$portal_url/event_icon.png"
+     url_expr="string:${portal_url}/@@dateandtime-controlpanel" visible="False"
+     i18n:attributes="title">
+   <permission>Plone Site Setup: Site</permission>
+  </configlet>
+  <configlet title="Users and Groups" action_id="UsersGroups"
+     appId="UsersGroups" category="plone-users" condition_expr=""
+     icon_expr="string:$portal_url/group.png"
+     url_expr="string:${portal_url}/@@usergroup-userprefs" visible="False"
+     i18n:attributes="title">
+   <permission>Plone Site Setup: Users and Groups</permission>
+  </configlet>
+
+
+</object>
