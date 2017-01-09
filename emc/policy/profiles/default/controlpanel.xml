@@ -58,7 +58,7 @@
   <permission>Plone Site Setup: Mail</permission>
  </configlet>
  <!-- 主题 -->
- <configlet title="Themes" action_id="PortalSkin" appId="PortalSkin"
+ <configlet title="Themes" action_id="plone.app.theming" appId="plone.app.theming"
    category="plone-general" condition_expr=""
    icon_expr="string:$portal_url/skins_icon.png"
    url_expr="string:${portal_url}/@@skins-controlpanel" visible="False"
@@ -190,5 +190,39 @@
       i18n:attributes="title">
     <permission>Plone Site Setup: Imaging</permission>
    </configlet>
-
+   <!-- 评论 -->
+   <configlet title="Discussion" action_id="discussion"
+      appId="plone.app.discussion" category="plone-general" condition_expr=""
+      icon_expr="string:${portal_url}/discussionitem_icon.png"
+      url_expr="string:${portal_url}/@@discussion-controlpanel" visible="False">
+    <permission>Manage portal</permission>
+   </configlet>
+   <!-- 内容设置 -->
+   <configlet title="Content Settings" action_id="TypesSettings"
+      appId="TypesSettings" category="plone-content" condition_expr=""
+      icon_expr="string:$portal_url/document_icon.png"
+      url_expr="string:${portal_url}/@@content-controlpanel" visible="False">
+    <permission>Plone Site Setup: Types</permission>
+   </configlet>
+   <!-- dexterity内容类型 -->
+   <configlet title="Dexterity Content Types" action_id="dexterity-types"
+      appId="Plone" category="plone-content" condition_expr=""
+      icon_expr="string:$portal_url/document_icon.png"
+      url_expr="string:${portal_url}/@@dexterity-types" visible="False">
+    <permission>Manage portal</permission>
+   </configlet>
+   <!-- 缓存 -->
+   <configlet title="Caching" action_id="plone.app.caching"
+      appId="plone.app.caching" category="plone-advanced" condition_expr=""
+      icon_expr="string:$portal_url/++resource++plone.app.caching.gif"
+      url_expr="string:${portal_url}/@@caching-controlpanel" visible="False">
+    <permission>Manage portal</permission>
+   </configlet>
+   <!-- 配置注册表 -->
+   <configlet title="Configuration Registry" action_id="plone.app.registry"
+      appId="plone.app.registry" category="plone-advanced" condition_expr=""
+      icon_expr="string:$portal_url/++resource++plone.app.registry/icon.png"
+      url_expr="string:${portal_url}/portal_registry" visible="False">
+    <permission>Manage portal</permission>
+   </configlet>
 </object>
