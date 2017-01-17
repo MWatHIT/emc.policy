@@ -16,7 +16,7 @@
 
   <div metal:fill-slot="main">
     <div class="container-fluid">
-      <div class="row clearfix">
+      <div class="row clearfix homebanner">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
