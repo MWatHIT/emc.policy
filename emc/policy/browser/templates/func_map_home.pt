@@ -151,7 +151,16 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="panel-3" style="margin-top:40px">
-                <h2>科学计算目录</h2>
+                <!-- <h2>科学计算目录</h2> -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供各类数据、标准、期刊和会议论文、培训教材等，并对其进行归纳分类。">
+                  <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/kexuejisuan.png"></img>
+                  <a data-target="#emcpeixun"
+                    tal:attributes="href python:context.absolute_url() + '/diancijisuanji'">
+                  <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
+                    data-container="body" data-toggle="popover" data-placement="top">
+                    科学计算引擎
+                  </button>
+                  </a>
               </div>
               <div class="tab-pane fade" id="panel-4" style="margin-top:40px">
                 <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁兼容性设计中制定的设计参数与电磁兼容技术有关的国标、国军标、部标、院标、型号标准规范、美军标及欧洲标准，将其整理归类，用来查询及调用。">
