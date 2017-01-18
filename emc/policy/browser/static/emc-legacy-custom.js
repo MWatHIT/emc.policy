@@ -21,6 +21,7 @@ $(".nav-tabs").on("click","a",function (e) {
     window.location.href = url;
     return false;
   });
+$('.carousel').carousel();
 // popover
 // $(".func_pop").popover({
 //   trigger:"hover",
