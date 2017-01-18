@@ -17,6 +17,7 @@
   <div metal:fill-slot="main">
     <div class="container-fluid">
       <div class="row clearfix homebanner">
+        <div class="col-md-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -56,6 +57,7 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
+              </div>
           </div>
       <div class="row clearfix">
         <div class="col-md-12 column">
@@ -73,16 +75,16 @@
           <div class="tabbable" id="tabs-1">
             <ul class="nav nav-tabs">
               <li class="active">
-                 <a tal:attributes="href python:context.absolute_url() + '/project_folder'" data-toggle="tab">型号工程</a>
+                 <a href="#panel-1" data-toggle="tab">型号工程</a>
               </li>
               <li>
-                 <a tal:attributes="href python:context.absolute_url() + '/kb_folder'" data-toggle="tab">技术支持知识库</a>
+                 <a href="#panel-2" data-toggle="tab">技术支持知识库</a>
               </li>
               <li>
-                 <a tal:attributes="href python:context.absolute_url() + '/diancijisuanji'" data-toggle="tab">科学计算平台</a>
+                 <a href="#panel-3" data-toggle="tab">科学计算平台</a>
               </li>
               <li>
-                 <a tal:attributes="href python:context.absolute_url() + '/kb_folder/ormfolder/@@fashej_listings'" data-toggle="tab">电磁兼容性数据库</a>
+                 <a href="#panel-4" data-toggle="tab">电磁兼容性数据库</a>
               </li>
             </ul>
             <div class="tab-content">
@@ -152,7 +154,7 @@
               </div>
               <div class="tab-pane fade" id="panel-3" style="margin-top:40px">
                 <!-- <h2>科学计算目录</h2> -->
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供各类数据、标准、期刊和会议论文、培训教材等，并对其进行归纳分类。">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="科学计算引擎。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/kexuejisuan.png"></img>
                   <a data-target="#emcpeixun"
                     tal:attributes="href python:context.absolute_url() + '/diancijisuanji'">

@@ -1,6 +1,6 @@
 require([
-  'jquery','bootstrap-tabs'
-], function($,tabs) {
+  'jquery','bootstrap-tabs','bootstrap-carousel'
+], function($,tabs,carousel) {
   'use strict';
 $(document).ready(function(){
 $('.collapse-control').on('click', function () {
