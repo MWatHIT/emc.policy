@@ -73,16 +73,16 @@
           <div class="tabbable" id="tabs-1">
             <ul class="nav nav-tabs">
               <li class="active">
-                 <a href="#panel-1" data-toggle="tab">型号工程</a>
+                 <a tal:attributes="href python:context.absolute_url() + '/project_folder'" data-toggle="tab">型号工程</a>
               </li>
               <li>
-                 <a href="#panel-2" data-toggle="tab">技术支持知识库</a>
+                 <a tal:attributes="href python:context.absolute_url() + '/kb_folder'" data-toggle="tab">技术支持知识库</a>
               </li>
               <li>
-                 <a href="#panel-3" data-toggle="tab">科学计算平台</a>
+                 <a tal:attributes="href python:context.absolute_url() + '/diancijisuanji'" data-toggle="tab">科学计算平台</a>
               </li>
               <li>
-                 <a href="#panel-4" data-toggle="tab">电磁兼容性数据库</a>
+                 <a tal:attributes="href python:context.absolute_url() + '/kb_folder/ormfolder/@@fashej_listings'" data-toggle="tab">电磁兼容性数据库</a>
               </li>
             </ul>
             <div class="tab-content">
