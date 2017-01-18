@@ -16,7 +16,7 @@
 
   <div metal:fill-slot="main">
     <div class="container-fluid">
-      <div class="row clearfix homebanner">
+      <div class="row clearfix">
         <div class="col-md-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
@@ -27,21 +27,21 @@
                   </ol>
 
                 <div class="carousel-inner" role="listbox">
-                    <div class="item home_banner active">
-                      <img src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner1.png" alt="liaoningjian">
+                    <div class="item active">
+                      <img class="home_banner" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner1.png" alt="liaoningjian">
                       <div class="carousel-caption">
                         <h1>舰船</h1>
                         <p>系统电磁兼容技术支持平台主要是为信息化实施型号电磁兼容项目而设计和开发的，针对单位开展装备全寿命期的电磁兼容工作进行整体管理和辅助设计支持。另外平台也为单位的电磁兼容爱好者和相关人员提供了学习和参与的平台。</p>
                       </div>
                     </div>
-                    <div class="item home_banner">
-                      <img src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner2.png" alt="zhandouji">
+                    <div class="item">
+                      <img class="home_banner" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner2.png" alt="zhandouji">
                       <div class="carousel-caption">
                         <h1>战斗机</h1>
                       </div>
                     </div>
-                    <div class="item home_banner">
-                      <img src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner3.png" alt="weixing">
+                    <div class="item">
+                      <img class="home_banner" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner3.png" alt="weixing">
                       <div class="carousel-caption">
                         <h1>卫星</h1>
                       </div>
