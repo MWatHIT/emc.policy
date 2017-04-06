@@ -195,4 +195,4 @@ msgid "Mark as unreaded"
 msgstr "标记为未读"
 
 msgid "system Ajax view"
-msgstr "缺省Ajax视图"
+msgstr "查询视图"
