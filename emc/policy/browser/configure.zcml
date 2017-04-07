@@ -14,6 +14,7 @@
   <browser:page
       name="overview-controlpanel"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+
       layer="emc.theme.interfaces.IThemeSpecific"
       class=".overview.OverviewControlPanel"
       permission="plone.app.controlpanel.Overview"
@@ -33,7 +34,7 @@
    <browser:page
       for="Products.CMFCore.interfaces.ISiteRoot"
       name="index.html"
-      template="templates/func_map_home.pt"
+      template="templates/ajax_listings_homepage.pt"
       class=".homepage.FrontpageView"
  	  layer="emc.theme.interfaces.IThemeSpecific"
       permission="zope.Public"
@@ -112,7 +113,6 @@
         class=".common.LogoViewlet"
         permission="zope2.View"
         />
-
     <!-- override The breadcrumbs -->
     <browser:viewlet
         name="plone.path_bar"
@@ -120,7 +120,7 @@
         class=".common.PathBarViewlet"
         layer="emc.theme.interfaces.IThemeSpecific"
         permission="zope2.View"
-        />
+
     <!-- Override global sections viewlet -->
 
     <browser:viewlet

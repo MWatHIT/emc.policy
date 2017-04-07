@@ -42,8 +42,6 @@ STRUCTURE = [
                           'title': u'显卡',
                           'id': 'displaycard',
                           'description': u'显卡',
-
-
                           'layout': 'ajax_listings',
                            'children': [
                                         {'type': 'emc.project.doc',
@@ -65,7 +63,6 @@ STRUCTURE = [
                                          'id': 'audit',
                                          'description': u'显卡审核文档',
 
-
                                                                          } ,
                                         {'type': 'emc.project.doc',
                                          'title': u'故障诊断',
@@ -81,8 +78,6 @@ STRUCTURE = [
                           'title': u'网卡',
                           'id': 'network',
                           'description': u'网卡',
-
-
                           'layout': 'ajax_listings',
                            'children': [
                                         {'type': 'emc.project.doc',
@@ -173,7 +168,6 @@ def post_install(context):
     current = api.user.get_current()
     try:
         pm.memberareaCreationFlag = True
-        pm.createMemberarea(member_id= current.id)
         event.notify(MemberAreaCreatedEvent(current))
     except:
         return
