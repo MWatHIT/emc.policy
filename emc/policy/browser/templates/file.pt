@@ -18,12 +18,12 @@
   	<span aria-hidden="true">&times;</span></button>
   	<span><strong>敬告：</strong>
   	必须下载并安装</span><span>
-  	<a href="http://image4024.wicp.net:8080/emcstatic/zopeedit-win32-1.0.0.exe">“外部编辑器客户端”</a>
+  	<a href="http://www.testurl02.com/emcstatic/zopeedit-win32-1.0.0.exe">“外部编辑器客户端”</a>
   	，才能使用本地应用编辑文件。</span>
   	<div class="col-sm-1"></div>
 </div>
- </div>	
- <div class="row">	
+ </div>
+ <div class="row">
  	<div class="col-md-2 col-md-offset-10">
  		<a href='#'
    			tal:attributes='href
@@ -47,7 +47,7 @@
     <span class="discreet"
     	tal:condition="python:not view.isKb()"
         tal:define="b python:size%1024">
-      &mdash; <span tal:replace="b" /> B</span>      
+      &mdash; <span tal:replace="b" /> B</span>
   </p>
 
   <video tal:condition="view/is_videotype" controls="controls">

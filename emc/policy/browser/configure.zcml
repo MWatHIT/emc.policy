@@ -120,8 +120,9 @@
         class=".common.PathBarViewlet"
         layer="emc.theme.interfaces.IThemeSpecific"
         permission="zope2.View"
+        />
 
-    <!-- Override global sections viewlet -->
+    <!-- override global sections viewlet  -->
 
     <browser:viewlet
         name="plone.global_sections"
