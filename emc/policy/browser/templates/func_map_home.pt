@@ -17,7 +17,7 @@
   <div metal:fill-slot="main">
     <div class="container-fluid">
       <div class="row clearfix">
-        <div class="col-md-12">
+        <div class="col-md-8 col-md-offset-2">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -31,7 +31,9 @@
                       <img class="home_banner" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/banner1.png" alt="liaoningjian">
                       <div class="carousel-caption">
                         <h1>舰船</h1>
-                        <p>系统电磁兼容技术支持平台主要是为信息化实施型号电磁兼容项目而设计和开发的，针对单位开展装备全寿命期的电磁兼容工作进行整体管理和辅助设计支持。另外平台也为单位的电磁兼容爱好者和相关人员提供了学习和参与的平台。</p>
+                        <!--
+			<p>系统电磁兼容技术支持平台主要是为信息化实施型号电磁兼容项目而设计和开发的，针对单位开展装备全寿命期的电磁兼容工作进行整体管理和辅助设计支持。另外平台也为单位的电磁兼容爱好者和相关人员提供了学习和参与的平台。</p>
+			-->
                       </div>
                     </div>
                     <div class="item">
@@ -89,7 +91,7 @@
             </ul>
             <div class="tab-content">
               <div class="tab-pane fade in active" id="panel-1" style="margin-top:40px">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="由产品树、设计师团队以及相关的电磁兼容任务等要素组成，相互分工与配合以完成各级型号产品的电磁兼容性工作。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="由产品树、设计师团队以及相关的电磁兼容任务等要素组成，相互分工与配合以完成各级型号产品的电磁兼容性工作。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/xinghaogongcheng.png"></img>
                   <a data-target="#xinghaogongcheng"
                     tal:attributes="href python:context.absolute_url() + '/project_folder'">
@@ -101,60 +103,60 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="panel-2" style="margin-top:40px">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供电磁环境预测、频率分析、屏蔽效能计算、线缆辐射及耦合分析、天线辐射场计算与天线隔离度分析等分析方法，并给出可以采用的软件工具及相关链接。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="提供电磁环境预测、频率分析、屏蔽效能计算、线缆辐射及耦合分析、天线辐射场计算与天线隔离度分析等分析方法，并给出可以采用的软件工具及相关链接。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_fenxi.png"></img>
                   <a data-target="#emcfenxi"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/resources_folder/emc-1/fenxi'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性分析模块
+                    EMC分析模块
                   </button>
 
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供电磁兼容性中常用设计方法及相关标准，提供可以采用的计算程序或商用软件介绍及举例。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="提供电磁兼容性中常用设计方法及相关标准，提供可以采用的计算程序或商用软件介绍及举例。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_sheji.png"></img>
                   <a data-target="#emcsheji"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/resources_folder/emc-1/sheji'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性设计模块
+                    EMC设计模块
                   </button>
                   </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="包含系统、分系统与设备的试验方法，以及相关标准规范等。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="包含系统、分系统与设备的试验方法，以及相关标准规范等。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_shiyan.png"></img>
                   <a data-target="#emcshiyan"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/resources_folder/emc-1/shiyan'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性实验模块
+                    EMC实验模块
                   </button>
                   </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供常用软件介绍、使用指南与仿真案例等。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="提供常用软件介绍、使用指南与仿真案例等。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_ruanjian.png"></img>
                   <a data-target="#emcfangzhen"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/resources_folder/emc-1/fangzhen'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性仿真模块
+                    EMC仿真模块
                   </button>
                   </a>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="提供各类数据、标准、期刊和会议论文、培训教材等，并对其进行归纳分类。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="提供各类数据、标准、期刊和会议论文、培训教材等，并对其进行归纳分类。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_peixun.png"></img>
                   <a data-target="#emcpeixun"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/resources_folder/emc-1/peixun'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性培训模块
+                    EMC培训模块
                   </button>
                   </a>
                 </div>
               </div>
               <div class="tab-pane fade" id="panel-3" style="margin-top:40px">
                 <!-- <h2>科学计算目录</h2> -->
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" title="科学计算引擎。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="科学计算引擎。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/kexuejisuan.png"></img>
                   <a data-target="#emcpeixun"
                     tal:attributes="href python:context.absolute_url() + '/diancijisuanji'">
@@ -166,43 +168,43 @@
               </div>
             </div>
               <div class="tab-pane fade" id="panel-4" style="margin-top:40px">
-                <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁兼容性设计中制定的设计参数与电磁兼容技术有关的国标、国军标、部标、院标、型号标准规范、美军标及欧洲标准，将其整理归类，用来查询及调用。">
+                <div class="col-md-2 col-sm-3 col-xs-6" title="记录电磁兼容性设计中制定的设计参数与电磁兼容技术有关的国标、国军标、部标、院标、型号标准规范、美军标及欧洲标准，将其整理归类，用来查询及调用。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_shujuku.png"></img>
                   <a data-target="#canshu"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/ormfolder/@@fashej_listings'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性参数数据库
+                    参数数据库
                   </button>
                   </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁环境的电磁数据及几何特性数据。">
+                <div class="col-md-2 col-sm-3" title="记录电磁环境的电磁数据及几何特性数据。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_huanjingku.png"></img>
                   <a data-target="#huanjing"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/ormfolder/@@fashej_listings'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性环境数据库
+                    环境数据库
                   </button>
                 </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6" title="包含测试目的、测试属性（型号，批次，外场，实验室等情况）、测试人员及时间和地点、测试仪器、测试类型及结果、测试方法">
+                <div class="col-md-2 col-sm-3" title="包含测试目的、测试属性（型号，批次，外场，实验室等情况）、测试人员及时间和地点、测试仪器、测试类型及结果、测试方法">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_ceshiku.png"></img>
                   <a data-target="#canshu"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/ormfolder/@@fashej_listings'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性测试数据库
+                    测试数据库
                   </button>
                 </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6" title="记录电磁兼容设计中的通用数据。">
+                <div class="col-md-2 col-sm-3" title="记录电磁兼容设计中的通用数据。">
                   <img class="img-responsive center-block" src="http://kwsensen1.f3322.net:8080/emcstatic/ico/emc_gongyongku.png"></img>
                   <a data-target="#canshu"
                     tal:attributes="href python:context.absolute_url() + '/kb_folder/ormfolder/@@fashej_listings'">
                   <button id="func_pop" style="margin-top:20px" class="btn btn-default btn-block"
                     data-container="body" data-toggle="popover" data-placement="top">
-                    电磁兼容性公用数据库
+                    公用数据库
                   </button>
                 </a>
                 </div>
