@@ -11,6 +11,7 @@ from z3c.relationfield import RelationValue
 from zope.component import getUtility
 from zope.intid import IntIds
 from zope.intid.interfaces import IIntIds
+from emc.policy.migration import add_navigator_portlet
 
 logger = getLogger(__name__)
 
@@ -144,15 +145,51 @@ STRUCTURE = [
 def isNotCurrentProfile(context):
     return context.readDataFile('emcpolicy_marker.txt') is None
 
+def setupGroups(context):
+    """create emc management groups and management users
+    """
 
+    group = api.group.create(
+            groupname='System Administrators',
+            title='System Administrators',
+            description='EMC System Administrators',
+            roles=['SysAdmin','Site Administrator', ],
+            )
+    group = api.group.create(
+            groupname='Secure Staffs',
+            title='Secure Staffs',
+            description='EMC Secure Staffs',
+            roles=['SecStaff','Site Administrator', ],
+            )
+    group = api.group.create(
+            groupname='Secure Auditors',
+            title='Secure Auditors',
+            description='EMC Secure Auditors',
+            roles=['SecAuditor','Site Administrator', ],
+            )
+    for i in range(1,3):
+        api.user.create(
+            username='master%s' % i,
+            email='master%s@plone.org' % i,
+            password='secret$',
+                               )
+    api.group.add_user(groupname='System Administrators', username='test17')
+    api.group.add_user(groupname='Secure Staffs', username='test18')
+    api.group.add_user(groupname='Secure Auditors', username='test19')
+
+
+# def run_after(context):
 def post_install(context):
-    """Setuphandler for the profile 'default'
+    """post Setuphandler for the profile 'default'
     """
     if isNotCurrentProfile(context):
         return
     # Do something during the installation of this package
-    # return
+#     return
     portal = api.portal.get()
+    defaulpage = portal.get('front-page', None)
+    if defaulpage is not None:
+        api.content.delete(defaulpage)
     members = portal.get('events', None)
     if members is not None:
         api.content.delete(members)
@@ -171,13 +208,8 @@ def post_install(context):
         event.notify(MemberAreaCreatedEvent(current))
     except:
         return
-
-
     for item in STRUCTURE:
         _create_content(item, portal)
-#     set relation
-
-
     for i in range(1,20):
         user = api.user.create(
                                username='test%s' % i,
@@ -185,18 +217,11 @@ def post_install(context):
                                email='test%s@plone.org' % i,
                                password='secret',
                                )
-
-
-
-
-def content(context):
-    """Setuphandler for the profile 'content'
-    """
-    if context.readDataFile('emcpolicy_content_marker.txt') is None:
-        return
-    pass
-
-
+    setupGroups(context)
+    try:
+        add_navigator_portlet(context)
+    except:
+        pass
 
 def _create_content(item, container):
     new = container.get(item['id'], None)

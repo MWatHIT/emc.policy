@@ -9,6 +9,12 @@
 
   <five:registerPackage package="." initialize=".initialize" />
   <i18n:registerTranslations directory="locales" />
+
+  <utility
+  	component=".vocabularies.safe_level_factory"
+  	name="emc.safe_level"
+	/>
+
   <genericsetup:registerProfile
       name="default"
       title="emc.policy"
@@ -16,6 +22,7 @@
       description="Installs the emc.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
   <!-- -*- extra stuff goes here -*- -->
     <monkey:patch
      description="patch when create Member area function fire a createMemberArea event"
@@ -27,16 +34,34 @@
    <include package=".browser" />
    <include package=".portlets" />
    <include package=".patch" />
+
    <!-- cancel pas plugin
    <include package=".sqlpas" />
    -->
 
 <!-- login redirection to workspace
-<subscriber
-    for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
-    handler=".subscriber.userLoginedIn"
+	<subscriber
+    	for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
+    	handler=".subscriber.userLoginedIn"
     />
-    -->
+	<subscriber
+    	for="Products.PluggableAuthService.interfaces.events.IPrincipalDeletedEvent"
+    	handler=".subscriber.PrincipalDeletedHandler"
+    />
+        -->
+	<subscriber
+    	for="emc.policy.interfaces.IDeleteMemberEvent"
+    	handler=".subscriber.DeleteMemberEventHandler"
+    />
+	<subscriber
+    	for="emc.policy.interfaces.ICreateMemberEvent"
+    	handler=".subscriber.CreateMemberEventHandler"
+    />
+	<subscriber
+    	for="emc.policy.interfaces.IChangeMemberEvent"
+    	handler=".subscriber.ChangeMemberEventHandler"
+    />
+
     <genericsetup:importStep
         name="emc.policy-postInstall"
         title="emc.policy post_install import step"
@@ -44,11 +69,22 @@
         handler=".setuphandlers.post_install">
         <depends name='typeinfo' />
     </genericsetup:importStep>
-  <genericsetup:upgradeStep
-      title="Add navigator portlet to project folder"
-      description="Add navigator portlet to project folder"
-      source="1001"
-      destination="1002"
-      handler="emc.policy.migration.add_navigator_portlet"
-      profile="emc.project:default"/>
+
+    <!--
+   	<genericsetup:upgradeStep
+      	title="Create management users and groups"
+      	description="Create management users and groups for EMC"
+      	source="1002"
+      	destination="1003"
+      	handler="emc.policy.migration.setupGroups"
+      	profile="emc.policy:default"/>
+      	-->
+  	<genericsetup:upgradeStep
+      	title="Add navigator portlet to project folder"
+      	description="Add navigator portlet to project folder"
+      	source="1001"
+      	destination="1002"
+      	handler="emc.policy.migration.add_navigator_portlet"
+      	profile="emc.policy:default"/>
+
 </configure>

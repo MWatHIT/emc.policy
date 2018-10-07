@@ -17,6 +17,20 @@
       permission="zope.Public" />
       
   <include package="collective.monkeypatcher" />
+  <!--
+    <monkey:patch
+     description="patch navtree show children function"
+     class ="Products.CMFPlone.browser.navtree.SitemapNavtreeStrategy"
+     original="showChildrenOf"
+     replacement=".navtree.showChildrenOf"
+  />
+    <monkey:patch
+     description="patch PlonePAS delete user"
+     module ="Products.PlonePAS.pas"
+     original="_doDelUser"
+     replacement=".pas._doDelUser"
+  />   
+    -->
     <monkey:patch
      description="patch i18njs view for zh"
      class ="plone.app.content.browser.i18n.i18njs"
@@ -62,5 +76,18 @@
      original="constructMessage"
      replacement="._utils.constructMessage"
   /> 
-  
+    <monkey:patch
+     description="patch when Member login"
+     class ="Products.PlonePAS.tools.membership.MembershipTool"
+     original="loginUser"
+     replacement=".membership.loginUser"
+  /> 
+   <monkey:patch
+     description="patch when Member logout"
+     class ="Products.PluggableAuthService.PluggableAuthService.PluggableAuthService"
+     original="logout"
+     replacement=".logout.logout"
+  />
+
+     
 </configure>
